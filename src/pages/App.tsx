@@ -3,11 +3,11 @@ import React from 'react';
 import Formulario from '../components/Formulario';
 import Lista from '../components/Lista';
 
-import './style.scss';
+import "./App.scss";
 
 function App() {
   return (
-    <div className="AppStyle">
+    <div className='AppStyle'>
       <Formulario />
       <Lista />
     </div>

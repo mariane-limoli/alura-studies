@@ -1,11 +1,12 @@
 import React from "react";
+
 import './style.scss';
 
-class Botao extends React.Component {
+class Botao extends React.Component<{texto:string}> {
    render(){
     return (
         <button className="botao">
-                Botão
+                {this.props.texto}
         </button>
     )
    }
