@@ -18,16 +18,16 @@ export default function Item (
     console.log(tarefa, tempo, selecionado, completado, id);
     return (
         <li 
-        className="item" 
-        onClick={()=> selecionaTarefa(
-        {
-            tarefa,
-            tempo,
-            selecionado,
-            completado,
-            id
-        
-        })}>
+            className={`${'item'} ${selecionado ? "itemSelecionado" : ""} `}
+            onClick={()=> selecionaTarefa(
+            {
+                tarefa,
+                tempo,
+                selecionado,
+                completado,
+                id
+            
+            })}>
             <h3>{tarefa}</h3>
             <span>{tempo}</span>
         </li>
