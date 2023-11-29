@@ -18,8 +18,8 @@ export default function Item (
     console.log(tarefa, tempo, selecionado, completado, id);
     return (
         <li 
-            className={`${'item'} ${selecionado ? "itemSelecionado" : ""} `}
-            onClick={()=> selecionaTarefa(
+            className={`${'item'} ${selecionado ? "itemSelecionado" : ""} ${completado ? "itemCompletado": ""} `}
+            onClick={()=> !completado && selecionaTarefa(
             {
                 tarefa,
                 tempo,
@@ -30,6 +30,7 @@ export default function Item (
             })}>
             <h3>{tarefa}</h3>
             <span>{tempo}</span>
+            {completado && <span className='concluido'aria-label='tarefa-completado' ></span>}
         </li>
     );
 }
